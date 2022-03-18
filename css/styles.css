@@ -1,3 +1,4 @@
+/*Animations*/
 @keyframes growLine {
     from {
             transform: scaleX(0);
@@ -16,15 +17,7 @@
           }
     }
 
-@keyframes slide {
-    from {
-            transform:translateX(0);
-          }
-    to {
-            transform:translateX(-100vw);
-          }
-    }
-
+/*Styles*/
 * {
         border: none;
         box-sizing: border-box;
@@ -103,9 +96,10 @@ p {
 
 .dots {
         background-image: url("../img/back/desktop/dots.png");
-        background-repeat: repeat;
+        background-repeat: cover;
       }
 
+        /*Fonts*/
 @font-face {
         font-family: 'Helvetica';
         src: url('../fonts/helvetica.woff2') format('woff2')
@@ -146,8 +140,8 @@ p {
       }
 
 .grid {
-        background-image: url("../img/back/desktop/grid.png");
-        background-repeat: repeat;
+        background-image: url("../img/back/mobile/grid.png");
+        background-repeat: cover;
       }
 
 .hero {
@@ -197,12 +191,13 @@ p {
         width: auto;
       }
 
+      /*Colors*/
 :root {
-    --color-black: #303030;
-    --color-blue:  #285dcf;
-    --color-gold:  #ff9a01;
-    --color-pink:  #fd1d51;
-    --color-white: #fafafa;
+      --color-black: #303030;
+      --color-blue:  #285dcf;
+      --color-gold:  #ff9a01;
+      --color-pink:  #fd1d51;
+      --color-white: #fafafa;
       }
 
 .showcase {
@@ -211,6 +206,7 @@ p {
         grid-template-columns: 100%;
         justify-items: center;
         margin: 0 0 6rem;
+        row-gap: 3rem;
       }
 
 .showcase__button {
@@ -298,9 +294,17 @@ p {
         width: 90%;
       }
 
+.showcase__reverse .showcase__image__background {
+        grid-row: 1;
+}
+
+.showcase__reverse .showcase__mat {
+        grid-row: 2;
+}
+
 .squiggles {
         background-image: url("../img/back/desktop/squiggles.png");
-        background-repeat: repeat;
+        background-repeat: cover;
       }
 
 .stripeFirst {
@@ -353,22 +357,47 @@ p {
         width: 90%;
       }
 
-@media screen and (min-width: 768px) {
+/*Responsive design*/
+        /*Tablet*/
+@media screen and (min-width: 834px) {
+        .dots {
+                background-image: url("../img/back/tablet/dots.png");
+        }
+        .grid {
+                background-image: url("../img/back/tablet/grid.png");
+        }
         .showcase {
                 grid-template-columns: 50% 50%;
         }
+        .showcase__reverse .showcase__mat {
+                grid-row: 1;
+        }
+        .squiggles {
+          background-image: url("../img/back/tablet/squiggles.png");
+        }
         .wrapper {
-                width: 80%;
+                width: 85%;
         }
       }
 
+        /*Desktop*/
 @media screen and (min-width: 1024px) {
+        .dots {
+                background-image: url("../img/back/desktop/dots.png");
+        }
+        .grid {
+                background-image: url("../img/back/desktop/grid.png");
+        }
+        .squiggles {
+                background-image: url("../img/back/desktop/squiggles.png");
+        }
         .wrapper {
                 max-width: 1200px;
                 width: 65%;
         }
       }
 
+        /*Dark mode*/
 @media (prefers-color-scheme: dark) {
         .collapsible {
                 color: var(--color-black);
@@ -387,6 +416,9 @@ p {
                 --color-white: #303030;
         }
         .showcase__button {
+          color: var(--color-black);
+        }
+        .showcase__button:hover {
           color: var(--color-black);
         }
         .showcase__image {

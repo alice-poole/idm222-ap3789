@@ -10,17 +10,19 @@
 
 <body>
 <main>
+<!--HEADING: Self introduction.-->
     <section class="hero" id="home">
         <h1 class="hero__title" id="test">Hi. I'm Alice.</h1>
         <h3 class="hero__subtitle">I like design.</h3>
     </section>
-
+<!--BODY: Collapsible "pages"-->
     <section class="topic">
+<!--THINGS I MADE: Portfolio, summaries and links to other projects NOTE: Update after semester.-->
         <section class="topic__page stripeFirst pink dots">
             <a class="collapsible pink dots"><h2 class="stripeFirstText">Things I Made</h2></a>
             <div class="content wrapper">
                 <div class="inside__wrapper">
-                        <div class="showcase">
+                        <div class="showcase showcase__reverse">
                             <div class="showcase__mat">
                                 <h3 class="showcase__heading">Fantasy Zodiac</h3>
                                 <p class="showcase__description">To help inspire new gamers (and learn Javascript while I'm at it) I made this! Enter your birthday and be assigned a fantasy class.
@@ -28,12 +30,20 @@
                                 <a class="showcase__button showcase__button__pink" href="zodiac.html" target="_blank">Check it out!</a>
                             </div>
                             <div class="showcase__image__background">
-                                <img class="showcase__image" src="../img/showcase/desktop/zodiac.jpg">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="../img/showcase/desktop/zodiac.jpg" />
+                                    <source media="(min-width: 834px)" srcset="../img/showcase/tablet/zodiac.jpg" />
+                                    <img class="showcase__image" src="../img/showcase/mobile/zodiac.jpg" alt="An entry for a Paladin in a dark forest." />
+                                </picture>
                             </div>
                         </div>
                         <div class="showcase">
                             <div class="showcase__image__background">
-                                <img class="showcase__image" src="../img/showcase/desktop/drexeldnd.jpg">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="../img/showcase/desktop/drexeldnd.jpg" />
+                                    <source media="(min-width: 834px)" srcset="../img/showcase/tablet/drexeldnd.jpg" />
+                                    <img class="showcase__image" src="../img/showcase/mobile/drexeldnd.jpg" alt="A wiki site featuring a dungeon stone navbar and a great red dragon header." />
+                                </picture>
                             </div>
                             <div class="showcase__mat">
                                 <h3 class="showcase__heading">Drexel D&D</h3>
@@ -42,7 +52,7 @@
                                 <a class="showcase__button showcase__button__pink" href="dnd.html" target="_blank">Check it out!</a>
                             </div>
                         </div>
-                        <div class="showcase">
+                        <div class="showcase showcase__reverse">
                             <div class="showcase__mat">
                                 <h3 class="showcase__heading">BLOC'D</h3>
                                 <p class="showcase__description">At DigiPen Institute of Technology, I wanted to see how simple games could get. My mission? Design a fun game with only one page of rules.
@@ -50,14 +60,18 @@
                                 <a class="showcase__button showcase__button__pink" href="../files/blocd.pdf" target="_blank">Check it out!</a>
                             </div>
                             <div class="showcase__image__background">
-                                <img class="showcase__image" src="../img/showcase/desktop/blocd.jpg">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="../img/showcase/desktop/blocd.jpg" />
+                                    <source media="(min-width: 834px)" srcset="../img/showcase/tablet/blocd.jpg" />
+                                    <img class="showcase__image" src="../img/showcase/mobile/blocd.jpg" alt="A rules page for a tic-tac-toe style boardgame." />
+                                </picture>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+<!--ABOUT ME: Resume, value statements. NOTE: Update resume with new projects and classwork after semester.-->
         <section class="topic__page stripeSecond blue squiggles">
             <a class="collapsible blue squiggles"><h2 class="stripeSecondText">About Me</h2></a>
                 <div class="content wrapper">
@@ -68,9 +82,21 @@
                                 <br><br>Every project deserves a one-of-a-kind touch. I specialize in user-first design to bring your projects to life.
                                 <br><br>My design journey has taken me to DigiPen Institute of Technology, the Interaction Design Foundation, and now Drexel University!</p>
                             <div class="pins">
-                                <img class="pins__pin" alt="Drexel University" src="../img/pins/desktop/drexel.png">
-                                <img class="pins__pin" alt="DigiPen Institute of Technology" src="../img/pins/desktop/digiPen.png">
-                                <img class="pins__pin" alt="Interaction Design Foundation" src="../img/pins/desktop/interactionDesignFoundation.png">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="../img/pins/desktop/drexel.png" />
+                                    <source media="(min-width: 834px)" srcset="../img/pins/tablet/drexel.png" />
+                                    <img class="pins__pin" src="../img/pins/mobile/drexel.png" alt="Drexel University" />
+                                </picture>
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="../img/pins/desktop/digiPen.png" />
+                                    <source media="(min-width: 834px)" srcset="../img/pins/tablet/digiPen.png" />
+                                    <img class="pins__pin" src="../img/pins/mobile/digiPen.png" alt="DigiPen Institute of Technology" />
+                                </picture>
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="../img/pins/desktop/interactionDesignFoundation.png" />
+                                    <source media="(min-width: 834px)" srcset="../img/pins/tablet/interactionDesignFoundation.png" />
+                                    <img class="pins__pin" src="../img/pins/mobile/interactionDesignFoundation.png" alt="Interaction Design Foundation" />
+                                </picture>
                             </div>
                             <p class="showcase__description"></p> 
                             <a class="showcase__button showcase__button__blue" href="../files/resume.pdf" target="_blank">Résumé</a>
@@ -82,9 +108,21 @@
                                 <br><br>Accessibility is important. This very site uses patterned backgrounds for colorblind accessibility, and button-styled links for screen readers!
                                 <br><br>As a lifelong nerd, I love making games and websites easy to use for more people. That's why I'm passionate about UX, UI, and game design.</p>
                                 <div class="pins">
-                                    <img class="pins__pin" alt="Progress Pride flag" src="../img/pins/desktop/pride.jpg">
-                                    <img class="pins__pin" alt="Trevor Project" src="../img/pins/desktop/trevorProject.png">
-                                    <img class="pins__pin" alt="Cystic Fibrosis Foundation" src="../img/pins/desktop/CFFoundation.png">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="../img/pins/desktop/pride.jpg" />
+                                        <source media="(min-width: 834px)" srcset="../img/pins/tablet/pride.jpg" />
+                                        <img class="pins__pin" src="../img/pins/mobile/pride.jpg" alt="Progress Pride flag" />
+                                    </picture>
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="../img/pins/desktop/trevorProject.png" />
+                                        <source media="(min-width: 834px)" srcset="../img/pins/tablet/trevorProject.png" />
+                                        <img class="pins__pin" src="../img/pins/mobile/trevorProject.png" alt="Trevor Project" />
+                                    </picture>
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="../img/pins/desktop/CFFoundation.png" />
+                                        <source media="(min-width: 834px)" srcset="../img/pins/tablet/CFFoundation.png" />
+                                        <img class="pins__pin" src="../img/pins/mobile/CFFoundation.png" alt="Cystic Fibrosis Foundation" />
+                                    </picture>
                                 </div>
                                 <p class="showcase__description"></p> 
                                 <a class="showcase__button showcase__button__blue" href="https://give.thetrevorproject.org/give/63307/#!/donation/checkout" target="_blank">Donate</a>
@@ -92,7 +130,7 @@
                     </div>
                 </div>
         </section>
-
+<!--GET IN TOUCH: Email, linkedin. NOTE: Learn how to build in an email form so email won't be publicly available.-->
         <section class="topic__page stripeThird gold grid">
             <a class="collapsible gold grid"><h2 class="stripeThirdText">Get In Touch</h2></a>
             <div class="content wrapper">
@@ -100,7 +138,7 @@
                     <div class="showcase__mat">
                         <h3 class="showcase__heading">Let's work together!</h3>
                         <p class="showcase__description">Are you a client or employer interested in my services? A fellow designer looking to connect?
-                            <br>Either way, I'm very pleased to meet you. Send me an email!
+                            <br>Either way, I'm very pleased to meet you. Send me an email! Contact Alice Poole:
                             <br><br>Email: &ensp; alicedoesgames@gmail.com</p>
                             <a class="showcase__button showcase__button__gold" href="https://www.linkedin.com/in/alice-poole-71aa96225/" target="_blank">LinkedIn</a>
                     </div>
@@ -109,7 +147,7 @@
         </section>
 
     </section>
-
+<!--FOOTER: Copyright Alice Poole 2022.-->
     <section class="footer">
         <p class="footer__text">&copy; Alice Poole 2022</p>
     </section>
